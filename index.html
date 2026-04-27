@@ -10,25 +10,28 @@
   <main class="desktop" aria-label="Windows XP inspired portfolio desktop">
     <section class="desktop-icons" aria-label="Portfolio links">
       <button class="desktop-icon folder" data-open="work" aria-label="Open work folder">
-        <span class="icon-art folder-art"></span><span class="label">work</span>
+        <span class="icon-art folder-art"></span><span class="label">Work</span>
       </button>
       <button class="desktop-icon folder" data-open="freelance" aria-label="Open freelance folder">
-        <span class="icon-art folder-art"></span><span class="label">freelance</span>
+        <span class="icon-art folder-art"></span><span class="label">Freelance</span>
       </button>
-      <button class="desktop-icon folder" data-open="passion-projects" aria-label="Open passions projects folder">
-        <span class="icon-art folder-art"></span><span class="label">passions<br>projects</span>
+      <button class="desktop-icon folder" data-open="art-tattoo" aria-label="Open art and tattoo folder">
+        <span class="icon-art folder-art"></span><span class="label">Art &<br>Tattoo</span>
       </button>
-      <button class="desktop-icon document" data-open="curriculum-vitae" aria-label="Open curriculum vitae document">
-        <span class="icon-art doc-art doc-word"></span><span class="label">curriculum<br>vitae.doc</span>
+      <button class="desktop-icon folder" data-open="about" aria-label="Open about folder">
+        <span class="icon-art folder-art"></span><span class="label">About</span>
       </button>
-      <button class="desktop-icon document" data-open="me" aria-label="Open me image">
-        <span class="icon-art image-art"></span><span class="label">me.png</span>
+      <button class="desktop-icon app" data-open="paint" aria-label="Open MS Paint drawing app">
+        <span class="icon-art paint-art"></span><span class="label">Paint</span>
+      </button>
+      <button class="desktop-icon bin" data-open="missing-skills" aria-label="Open missing skills recycle bin">
+        <span class="icon-art recycle-art"></span><span class="label">Missing<br>Skills</span>
       </button>
     </section>
 
     <section class="welcome-card" aria-label="Welcome">
-      <h1>Elooi De Buck</h1>
-      <p>Portfolio desktop. Open a folder, document, or image to explore my work.</p>
+      <h1>Your Name</h1>
+      <p>Graphic / web / motion designer. Open a folder to explore my work.</p>
     </section>
 
     <template id="window-template">
@@ -43,16 +46,25 @@
         </header>
         <nav class="window-menu" aria-label="Window menu">File&nbsp;&nbsp;Edit&nbsp;&nbsp;View&nbsp;&nbsp;Favorites&nbsp;&nbsp;Tools&nbsp;&nbsp;Help</nav>
         <div class="window-toolbar">
-          <span class="toolbar-button">← Back</span><span class="toolbar-button">Search</span><span class="toolbar-button">Folders</span>
+          <button class="toolbar-button back-button" type="button">← Back</button><span class="toolbar-button">Search</span><span class="toolbar-button">Folders</span>
         </div>
         <div class="address-bar"><strong>Address</strong><span></span></div>
-        <div class="window-content"></div>
+        <div class="window-content"></div><div class="resize-handle" aria-hidden="true"></div>
       </article>
     </template>
   </main>
 
   <footer class="taskbar" aria-label="Taskbar">
-    <button class="start-button"><span class="start-logo">▦</span> start</button>
+    <button class="start-button" id="start-button" aria-expanded="false" aria-controls="start-menu"><span class="start-logo">▦</span> contact</button>
+    <nav class="start-menu" id="start-menu" aria-label="Contact menu">
+      <div class="start-menu-header">Your Name</div>
+      <div class="start-menu-body">
+        <a href="#" class="start-menu-link"><span class="start-menu-icon linkedin-icon">in</span>LinkedIn</a>
+        <a href="#" class="start-menu-link"><span class="start-menu-icon instagram-icon">◎</span>Instagram</a>
+        <a href="#" class="start-menu-link"><span class="start-menu-icon email-icon">✉</span>Email</a>
+        <button class="start-menu-link start-contact-button" data-open="contact"><span class="start-menu-icon contact-icon">?</span>Contact form</button>
+      </div>
+    </nav>
     <div class="taskbar-programs" id="taskbar-programs"></div>
     <time id="clock" class="clock"></time>
   </footer>
